@@ -17,3 +17,6 @@ in `/usr/sbin/upnpd` , the upnp service will receive the ssdp packet through `re
 However, in `ssdp_method_check`, It calls `strcpy` to copy the buffer received (`v84`) into`v27`, which has only the size of 0x5EB. It will cause buffer overflow.
 
 ![image-20230728113854591](./image-20230728113854591.png)
+
+## timeline
+[2023/7/28] report to CVE
