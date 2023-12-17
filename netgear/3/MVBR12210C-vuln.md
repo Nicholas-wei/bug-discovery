@@ -12,4 +12,5 @@ In function `diagCgiPingMain`, it reads user ptovided parameter `ping_IPAddr` in
 
 ## timeline
 
-[2023/7/28] report to CVE
+[2023/7/28] report to CVE</br>
+[2023/8/21] assigned CVE-2023-39630
