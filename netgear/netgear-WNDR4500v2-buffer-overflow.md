@@ -20,3 +20,4 @@ However, in `ssdp_method_check`, It calls `strcpy` to copy the buffer received (
 
 ## timeline
 [2023/7/28] report to CVE
+[2023/8/21] assigned CVE-2023-39628
