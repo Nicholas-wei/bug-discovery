@@ -5,7 +5,7 @@ This vulnerability lies in the `diagCgiPingMain` function which influences  Netg
 ## vulnerbility description
 
 There is an OS command injection vulnerbility in function `diagCgiPingMain` in `/usr/sbin/httpd` </br>
-In function `diagCgiPingMain`, it reads user ptovided parameter `ping_IPAddr` into `v4`, this variable is passed into function `sprintf` and `system` without any length check, which may cause OS command injection via network packets
+In function `diagCgiPingMain`, it reads user ptovided parameter `ping_IPAddr` into `v4`, this variable is passed into function `sprintf` and `system` without any check, which may cause OS command injection via network packets
 
 ![image](https://github.com/Nicholas-wei/bug-discovery/assets/63231742/ddd3f267-5d78-4905-b653-c14fae858f59)
 
