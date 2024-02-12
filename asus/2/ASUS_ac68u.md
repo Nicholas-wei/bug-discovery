@@ -1,6 +1,6 @@
 # ASUS ac68U NULL pointer dereference
 
-ASUS [AC68U](https://www.asus.com.cn/supportonly/4g-ac68u/helpdesk_bios?model2Name=4G-AC68U), firmware version [3.0.0.4.384.82230](https://dlsvr04.asus.com.cn/pub/ASUS/wireless/4G-AC68U/FW_4G_AC68U_300438482230.zip?model=4G-AC68U) .The binary `/usr/sbin/httpd` has NULL pointer dereference vulnerability. Remote attackers can send malicious packet to the router, which will cause DoS(Deny of service) attack.
+ASUS [4G-AC68U](https://www.asus.com.cn/supportonly/4g-ac68u/helpdesk_bios?model2Name=4G-AC68U), firmware version [3.0.0.4.384.82230](https://dlsvr04.asus.com.cn/pub/ASUS/wireless/4G-AC68U/FW_4G_AC68U_300438482230.zip?model=4G-AC68U) .The binary `/usr/sbin/httpd` has NULL pointer dereference vulnerability. Remote attackers can send malicious packet to the router, which will cause DoS(Deny of service) attack.
 
 ## POC
 
