@@ -14,7 +14,7 @@ Affected Version:
 
 ## Description
 
-TL-WA850RE V2 contains hard-coded credential vulnerability in binary '/usr/bin/httpd'. Unauthenticated attackers can reverse engineering the product and gain proper admin credential. After that, an unauthenticated attacker can become an privileged user.
+TL-WA850RE V2 contains a hard-coded credential vulnerability in the binary `/usr/bin/httpd`. Unauthenticated attackers can reverse engineer the product and gain the proper admin credentials, which can then make them privileged users.
 
 ## Detail
 
