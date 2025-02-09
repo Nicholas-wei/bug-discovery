@@ -24,3 +24,6 @@ In binary `/usr/sbin/httpd`, the following code contains user authentication log
 
 ![image-20250209131012239](./images/image-20250209131012239.png)
 
+## timeline
+
+[25/02/09] report to CVE

@@ -43,3 +43,7 @@ Attackers can add the following header into http packet to become privileged.
 > Authorization: Basic: YWRtaW46YWRtaW4=
 >
 > Authorization: Basic: YWxsb3dlZDphbGxvd2Vk
+
+## Timeline
+
+[25/02/07] report to CVE
