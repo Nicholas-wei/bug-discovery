@@ -10,13 +10,13 @@ Affected version: 1.1.03.000
 
 ## Description
 
-In Linksys FW_LAPAC1200_LAPAC1750, Default credentials on the Web Interface allows anyone to log in to the server directly to perform administrative functions. Upon installation or upon first login, the application does not ask the user to change the password. There is no warning or prompt to ask the user to change the default password.
+In Linksys FW_LAPAC1200_LAPAC1750, Default credentials on the Web Interface allows anyone to log in to the firmware directly to perform administrative functions. Upon installation or upon first login, the application does not ask the user to change the password. There is no warning or prompt to ask the user to change the default password.
 
 ## Detail
 
 In the web service of FW_LAPAC1200_LAPAC1750, which is binary `mini_httpd`. The following code handles user's login procedure. Function `sub_408614` contains authentication procedure.
 
-![image-20250210193420949](.\FW_LAPAC1200_weak_passwd.assets\image-20250210193420949.png)
+![image-20250210193420949](FW_LAPAC1200_weak_passwd.assets/image-20250210193420949.png)
 
 The authentication function `sub_408614` read credential information from local file and compares it with user privided credential. 
 
