@@ -51,3 +51,7 @@ During initialization, the following code fills nvram with key `telnet_key_custo
 ![image-20250212112258959](telnet_hardcode_passwd.assets/image-20250212112258959.png)
 
 An unauthenticated attacker can start and log into the telnet service by using key "KL@UHeZ0". 
+
+## Timeline
+
+[02/12/2025] report to cve

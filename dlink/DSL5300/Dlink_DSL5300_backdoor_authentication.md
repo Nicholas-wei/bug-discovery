@@ -29,3 +29,7 @@ Notice that at line 50, If /Login/PrivateLogin!= NULL && /Login/PrivateLogin  ==
 This vulnerability is a recurring vulnerability of `CVE-2020-8863`, but was first found on this product. 
 
 ![image-20250212190225474](backdoor_authentication.assets/image-20250212190225474.png)
+
+## Timeline
+
+[02/12/2025] report to cve
