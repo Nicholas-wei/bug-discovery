@@ -1,20 +1,44 @@
 # totolink nr1800x hard-coded telnet password
 
-## firmware info
+## Affected firmware info
 
 Vendor: Totolink
 
-Firmware: Nr1800x
+Affected Firmware
 
-Version: nr1800x-v9.1.0u.6681_b20230703
+Nr1800x
 
-Support & Download URL: https://www.totolink.net/data/upload/20230830/3f37d49f50b33c3cf8ab241570728d39.zip
+- nr1800x-v9.1.0u.6681_b20230703
+
+T6 V3
+
+- V4.1.5cu.748_B20211015
+
+x5000r
+
+- v9.1.0cu.2350_b20230313
+
+A720R
+
+- V4.1.5cu.470_B20200911
+
+x2000r
+
+- v1.0.0-b20230726.1108
+
+lr350
+
+- v9.3.5u.6698_b20230810.rar
+
+Download website: https://www.totolink.net/home/news/me_name/id/39/menu_listtpl/DownloadC.html
 
 ## Description
 
-totolink nr1800x contains hard-coded telnet password, which allows any user to log into the telnet service of the device with root ptivilege.
+totolink Nr1800x, T6 V3, x5000r, A720R, x2000r, lr350 contains hard-coded telnet password, which allows any user to log into the telnet service of the device with root privilege.
 
 ## Detail
+
+I will take firmware Nr1800x nr1800x-v9.1.0u.6681_b20230703 as an example.
 
 In binary `www/cgi-bin/cstecgi.cgi`, The following code controls the telnet service. The following code is at address `0x437D40`.
 
