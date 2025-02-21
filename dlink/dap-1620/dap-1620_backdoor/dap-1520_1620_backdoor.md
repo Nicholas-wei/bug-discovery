@@ -64,3 +64,7 @@ accu=mp1524&pass=kmark43&code=smpwdc&hash=/lJ9NwfO3rRGcAkzv49mmA1$cmds=<base64 e
 ## timeline
 
 \[25-02-20\] report to vendor
+
+\[25-02-21\] vendor reply, saying they are not going to support the product, since they are end-of-service
+
+\[25-02-21\] report to CVE
