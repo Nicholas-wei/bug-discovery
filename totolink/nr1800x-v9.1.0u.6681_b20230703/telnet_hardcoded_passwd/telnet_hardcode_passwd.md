@@ -1,4 +1,4 @@
-# totolink nr1800x hard-coded telnet password
+# totolink multiple device hard-coded telnet password
 
 ## Affected firmware info
 
