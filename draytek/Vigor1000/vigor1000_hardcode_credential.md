@@ -41,3 +41,6 @@ However, The md5 is vulnerabile to brute-force attack. The following input is a 
 ![image-20250211191724506](vigor1000_hardcode_credential.assets/image-20250211191724506.png)
 
 So, malicious attackers can send malicious packet containing username=admin and password=admin to gain administrative privilege.
+
+## Timeline
+[05/04/25] assigned CVE-2025-27988

@@ -37,3 +37,4 @@ backtrack what `json_data` is, we can find that it is initializaed from `custom.
 ## Timeline
 
 [02/12/2025] report to cve
+[05/04/2025] assigned CVE-2025-27989

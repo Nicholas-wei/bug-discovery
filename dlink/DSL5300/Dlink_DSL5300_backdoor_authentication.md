@@ -33,3 +33,4 @@ This vulnerability is a recurring vulnerability of `CVE-2020-8863`, but was firs
 ## Timeline
 
 [02/12/2025] report to cve
+[05/04/2025] assigned CVE-2025-27993

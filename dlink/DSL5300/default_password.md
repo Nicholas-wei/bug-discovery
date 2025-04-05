@@ -52,3 +52,4 @@ So, malicious attackers can send the following credential to gain administrative
 ## Timeline
 
 [02/12/2025] report to cve
+[05/04/2025] assigned CVE-2025-27992

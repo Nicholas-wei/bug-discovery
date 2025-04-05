@@ -51,3 +51,6 @@ curl -X GET "192.168.1.1/graphic/config.xgi?a=1" --output ./test.bin
 The result is as follows, some content has been encrypted by the device.
 
 ![image-20241127210412134](report/image-20241127210412134.png)
+
+## Timeline
+[01/10/25] assigned CVE-2024-55162

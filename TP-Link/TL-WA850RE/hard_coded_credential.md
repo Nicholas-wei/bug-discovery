@@ -47,3 +47,4 @@ Attackers can add the following header into http packet to become privileged.
 ## Timeline
 
 [25/02/07] report to CVE
+[05/04/2025] assigned CVE-2025-27984

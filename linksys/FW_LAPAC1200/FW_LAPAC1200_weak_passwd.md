@@ -39,3 +39,6 @@ Take a look at /etc/default, The default nvram value for `login_password`  is `a
 > Authorization: Basic: YWRtaW46YWRtaW4=
 
 ![image-20250210194653897](FW_LAPAC1200_weak_passwd.assets/image-20250210194653897.png)
+
+## Timeline
+[05/04/25] assigned CVE-2025-27986

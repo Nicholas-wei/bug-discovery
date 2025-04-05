@@ -28,3 +28,6 @@ In function `setupAdmin`, it uses the third argument (which is the predictable `
 
 ![image-20250212205024171](pridictable_password.assets/image-20250212205024171.png)
 
+## Timeline
+[05/04/2025] assigned CVE-2025-27994
+
