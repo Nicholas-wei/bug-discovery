@@ -68,3 +68,5 @@ accu=mp1524&pass=kmark43&code=smpwdc&hash=/lJ9NwfO3rRGcAkzv49mmA1$cmds=<base64 e
 \[25-02-21\] vendor reply, saying they are not going to support the product, since they are end-of-service
 
 \[25-02-21\] report to CVE
+
+\[25-04-05\] assigned CVE-2025-27995
