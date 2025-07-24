@@ -32,6 +32,4 @@ Attackers can effectively guess the calculation output from the hard-coded usern
 
 Note that CalcDigest (in libssap.so) uses md5 to hash user inputs. Since all inputs are known under this scenario, attackers can easily guess the right digest result.
 
-## timeline
-
-[05/08/2025] report to vendor
+The vulnerability is contacted to the vendor first, but the vendor did not reply within 30 days.
