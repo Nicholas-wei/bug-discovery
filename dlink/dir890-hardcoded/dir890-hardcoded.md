@@ -1,4 +1,4 @@
-# D-Link dir890L hardcoded login shell
+# D-Link dir890L hardcoded UART credential
 
 ## Description
 
@@ -12,7 +12,7 @@ Firmware download URL: https://files.dlink.com.au/products/DIR-890L/REV_A/Firmwa
 
 ## Details
 
-In the `rgbin` binary of D-Link dir890L, the authentication for UART is handled via function at address 0xD084.  It compares user's input with credential retrieved from system configuration, the system will uses the hardcoded credential `35dHJLI!wyX:ut77a3d33w` for authentication with the configuration in case UART is 
+In the `rgbin` binary of D-Link dir890L, the authentication for UART is handled via function at address 0xD084.  It compares user's input with credential retrieved from system configuration, the system will uses the hardcoded credential `35dHJLI!wyX:ut77a3d33w` for authentication with the configuration in case UART is enabled.
 
 ![image-20250725160704240](dir890-hardcoded.assets/image-20250725160704240.png)
 
