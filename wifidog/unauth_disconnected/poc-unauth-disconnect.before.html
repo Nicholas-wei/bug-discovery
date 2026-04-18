@@ -1,0 +1,133 @@
+HTTP/1.0 200 Output Follows
+Server: Hughes Technologies Embedded Server
+Date: Mon, 13 Apr 2026 13:01:12 GMT
+Connection: close
+Content-Type: text/html
+
+<html>
+<head>
+<title>WiFiDog Status</title>
+<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+
+<style>
+body {
+  margin: 10px 60px 0 60px; 
+  font-family : bitstream vera sans, sans-serif;
+  color: #46a43a;
+}
+
+a {
+  color: #46a43a;
+}
+
+a:active {
+  color: #46a43a;
+}
+
+a:link {
+  color: #46a43a;
+}
+
+a:visited {
+  color: #46a43a;
+}
+
+#header {
+  height: 30px;
+  background-color: #B4F663;
+  padding: 20px;
+  font-size: 20pt;
+  text-align: center;
+  border: 2px solid #46a43a;
+  border-bottom: 0;
+}
+
+#header h2 {
+  margin: 0pt;
+}
+
+#menu {
+  width: 200px;
+  float: right;
+  background-color: #B4F663;
+  border: 2px solid #46a43a;
+  font-size: 80%;
+  min-height: 300px;
+}
+
+#menu h2 {
+  margin: 0;
+  background-color: #46a43a;
+  text-align: center;
+  color: #B4F663;
+}
+
+#copyright {
+}
+
+#content {
+  padding: 20px;
+  border: 2px solid #46a43a;
+  min-height: 300px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div id="header">
+    <h2>WiFiDog Status</h2>
+</div>
+
+<div id="menu">
+
+
+    <h2>Info</h2>
+    <ul>
+    <li>Version: 1.3.0
+
+    <li>Node ID: testgw
+    </ul>
+    <br>
+
+    <h2>Menu</h2>
+    <ul>
+    <li><a href='/wifidog/status'>WiFiDog Status</a>
+    <li><a href='/wifidog/about'>About WiFiDog</a>
+    <li><a href='http://www.wifidog.org'>WiFiDog's homepage</a>
+    </ul>
+</div>
+
+<div id="content">
+<h2><pre>WiFiDog status
+
+Version: 1.3.0
+Uptime: 0d 0h 0m 0s
+Has been restarted: no
+Internet Connectivity: yes
+Auth server reachable: yes
+Clients served this session: 1
+
+1 clients connected.
+
+Client 1
+  IP: 10.0.0.2 MAC: ea:51:b5:2e:3f:48
+  Token: WIFIDOG_DISCONNECT_POC
+  Downloaded: 0
+  Uploaded: 0
+
+Authentication servers:
+  Host: 10.0.0.1 (10.0.0.1)
+</pre></h2>
+</div>
+
+<div id="copyright">
+Copyright (C) 2004-2015.  This software is released under the GNU GPL license.
+</div>
+
+
+</body>
+</html>
+
+

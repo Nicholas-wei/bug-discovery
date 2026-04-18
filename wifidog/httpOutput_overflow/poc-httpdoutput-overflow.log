@@ -1,0 +1,63 @@
+=================================================================
+==3119793==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x7b6634ddd820 at pc 0x5f5bbacaa0c4 bp 0x7b66363dfa10 sp 0x7b66363df1c8
+WRITE of size 2218 at 0x7b6634ddd820 thread T5
+    #0 0x5f5bbacaa0c3  (/home/wzq/work/open-source/wifidog-gateway/src/.libs/wifidog+0xbc0c3) (BuildId: 41315f3ec8f6e73ed1d57483273bff68dca18f5e)
+    #1 0x7b663dad4f1f  (/home/wzq/work/open-source/wifidog-gateway/libhttpd/.libs/libhttpd.so.0+0xcf1f) (BuildId: 0430eb1d02e106fa05d9fcbe64c2caa5e6529f6f)
+    #2 0x5f5bbad03442  (/home/wzq/work/open-source/wifidog-gateway/src/.libs/wifidog+0x115442) (BuildId: 41315f3ec8f6e73ed1d57483273bff68dca18f5e)
+    #3 0x5f5bbad02be6  (/home/wzq/work/open-source/wifidog-gateway/src/.libs/wifidog+0x114be6) (BuildId: 41315f3ec8f6e73ed1d57483273bff68dca18f5e)
+    #4 0x7b663dad0eec  (/home/wzq/work/open-source/wifidog-gateway/libhttpd/.libs/libhttpd.so.0+0x8eec) (BuildId: 0430eb1d02e106fa05d9fcbe64c2caa5e6529f6f)
+    #5 0x7b663dad57e5  (/home/wzq/work/open-source/wifidog-gateway/libhttpd/.libs/libhttpd.so.0+0xd7e5) (BuildId: 0430eb1d02e106fa05d9fcbe64c2caa5e6529f6f)
+    #6 0x5f5bbad0958b  (/home/wzq/work/open-source/wifidog-gateway/src/.libs/wifidog+0x11b58b) (BuildId: 41315f3ec8f6e73ed1d57483273bff68dca18f5e)
+    #7 0x5f5bbacbffcc  (/home/wzq/work/open-source/wifidog-gateway/src/.libs/wifidog+0xd1fcc) (BuildId: 41315f3ec8f6e73ed1d57483273bff68dca18f5e)
+    #8 0x7b663d69caa3  (/lib/x86_64-linux-gnu/libc.so.6+0x9caa3) (BuildId: 8e9fd827446c24067541ac5390e6f527fb5947bb)
+    #9 0x7b663d729c6b  (/lib/x86_64-linux-gnu/libc.so.6+0x129c6b) (BuildId: 8e9fd827446c24067541ac5390e6f527fb5947bb)
+
+Address 0x7b6634ddd820 is located in stack of thread T5 at offset 10272 in frame
+    #0 0x7b663dad4bbf  (/home/wzq/work/open-source/wifidog-gateway/libhttpd/.libs/libhttpd.so.0+0xcbbf) (BuildId: 0430eb1d02e106fa05d9fcbe64c2caa5e6529f6f)
+
+  This frame has 2 object(s):
+    [32, 10272) 'buf' (line 721)
+    [10528, 10608) 'varName' (line 721) <== Memory access at offset 10272 partially underflows this variable
+HINT: this may be a false positive if your program uses some custom stack unwind mechanism, swapcontext or vfork
+      (longjmp and C++ exceptions *are* supported)
+Thread T5 created by T0 here:
+    #0 0x5f5bbaca7e55  (/home/wzq/work/open-source/wifidog-gateway/src/.libs/wifidog+0xb9e55) (BuildId: 41315f3ec8f6e73ed1d57483273bff68dca18f5e)
+    #1 0x5f5bbad02668  (/home/wzq/work/open-source/wifidog-gateway/src/.libs/wifidog+0x114668) (BuildId: 41315f3ec8f6e73ed1d57483273bff68dca18f5e)
+    #2 0x5f5bbad01dd8  (/home/wzq/work/open-source/wifidog-gateway/src/.libs/wifidog+0x113dd8) (BuildId: 41315f3ec8f6e73ed1d57483273bff68dca18f5e)
+    #3 0x7b663d62a1c9  (/lib/x86_64-linux-gnu/libc.so.6+0x2a1c9) (BuildId: 8e9fd827446c24067541ac5390e6f527fb5947bb)
+    #4 0x7b663d62a28a  (/lib/x86_64-linux-gnu/libc.so.6+0x2a28a) (BuildId: 8e9fd827446c24067541ac5390e6f527fb5947bb)
+    #5 0x5f5bbac27694  (/home/wzq/work/open-source/wifidog-gateway/src/.libs/wifidog+0x39694) (BuildId: 41315f3ec8f6e73ed1d57483273bff68dca18f5e)
+
+SUMMARY: AddressSanitizer: stack-buffer-overflow (/home/wzq/work/open-source/wifidog-gateway/src/.libs/wifidog+0xbc0c3) (BuildId: 41315f3ec8f6e73ed1d57483273bff68dca18f5e) 
+Shadow bytes around the buggy address:
+  0x7b6634ddd580: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x7b6634ddd600: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x7b6634ddd680: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x7b6634ddd700: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x7b6634ddd780: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x7b6634ddd800: 00 00 00 00[f2]f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2
+  0x7b6634ddd880: f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2
+  0x7b6634ddd900: f2 f2 f2 f2 00 00 00 00 00 00 00 00 00 00 f3 f3
+  0x7b6634ddd980: f3 f3 f3 f3 00 00 00 00 00 00 00 00 00 00 00 00
+  0x7b6634ddda00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x7b6634ddda80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==3119793==ABORTING

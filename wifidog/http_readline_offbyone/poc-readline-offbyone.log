@@ -1,0 +1,60 @@
+=================================================================
+==378518==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x74ddb82e2820 at pc 0x74ddc03558a2 bp 0x74ddbaefaab0 sp 0x74ddbaefaaa8
+WRITE of size 1 at 0x74ddb82e2820 thread T5
+    #0 0x74ddc03558a1  (/home/wzq/work/open-source/wifidog-gateway/libhttpd/.libs/libhttpd.so.0+0x78a1) (BuildId: 497f55c7c586a3923b08d45cb2d0e87c14e6b274)
+    #1 0x74ddc035ee33  (/home/wzq/work/open-source/wifidog-gateway/libhttpd/.libs/libhttpd.so.0+0x10e33) (BuildId: 497f55c7c586a3923b08d45cb2d0e87c14e6b274)
+    #2 0x5b08ae46b097  (/home/wzq/work/open-source/wifidog-gateway/src/.libs/wifidog+0x122097) (BuildId: 46dd9ff95b03255c2b2c82141df61407a3ff6fc0)
+    #3 0x5b08ae41c05c  (/home/wzq/work/open-source/wifidog-gateway/src/.libs/wifidog+0xd305c) (BuildId: 46dd9ff95b03255c2b2c82141df61407a3ff6fc0)
+    #4 0x74ddc009caa3  (/lib/x86_64-linux-gnu/libc.so.6+0x9caa3) (BuildId: 8e9fd827446c24067541ac5390e6f527fb5947bb)
+    #5 0x74ddc0129c6b  (/lib/x86_64-linux-gnu/libc.so.6+0x129c6b) (BuildId: 8e9fd827446c24067541ac5390e6f527fb5947bb)
+
+Address 0x74ddb82e2820 is located in stack of thread T5 at offset 10272 in frame
+    #0 0x74ddc035ec7f  (/home/wzq/work/open-source/wifidog-gateway/libhttpd/.libs/libhttpd.so.0+0x10c7f) (BuildId: 497f55c7c586a3923b08d45cb2d0e87c14e6b274)
+
+  This frame has 2 object(s):
+    [32, 10272) 'buf' (line 370) <== Memory access at offset 10272 overflows this variable
+    [10528, 10628) 'authBuf' (line 446)
+HINT: this may be a false positive if your program uses some custom stack unwind mechanism, swapcontext or vfork
+      (longjmp and C++ exceptions *are* supported)
+Thread T5 created by T0 here:
+    #0 0x5b08ae403ee5  (/home/wzq/work/open-source/wifidog-gateway/src/.libs/wifidog+0xbaee5) (BuildId: 46dd9ff95b03255c2b2c82141df61407a3ff6fc0)
+    #1 0x5b08ae45f565  (/home/wzq/work/open-source/wifidog-gateway/src/.libs/wifidog+0x116565) (BuildId: 46dd9ff95b03255c2b2c82141df61407a3ff6fc0)
+    #2 0x5b08ae45eaae  (/home/wzq/work/open-source/wifidog-gateway/src/.libs/wifidog+0x115aae) (BuildId: 46dd9ff95b03255c2b2c82141df61407a3ff6fc0)
+    #3 0x74ddc002a1c9  (/lib/x86_64-linux-gnu/libc.so.6+0x2a1c9) (BuildId: 8e9fd827446c24067541ac5390e6f527fb5947bb)
+    #4 0x74ddc002a28a  (/lib/x86_64-linux-gnu/libc.so.6+0x2a28a) (BuildId: 8e9fd827446c24067541ac5390e6f527fb5947bb)
+    #5 0x5b08ae383724  (/home/wzq/work/open-source/wifidog-gateway/src/.libs/wifidog+0x3a724) (BuildId: 46dd9ff95b03255c2b2c82141df61407a3ff6fc0)
+
+SUMMARY: AddressSanitizer: stack-buffer-overflow (/home/wzq/work/open-source/wifidog-gateway/libhttpd/.libs/libhttpd.so.0+0x78a1) (BuildId: 497f55c7c586a3923b08d45cb2d0e87c14e6b274) 
+Shadow bytes around the buggy address:
+  0x74ddb82e2580: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x74ddb82e2600: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x74ddb82e2680: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x74ddb82e2700: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x74ddb82e2780: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x74ddb82e2800: 00 00 00 00[f2]f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2
+  0x74ddb82e2880: f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2
+  0x74ddb82e2900: f2 f2 f2 f2 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8 f8
+  0x74ddb82e2980: f8 f3 f3 f3 f3 f3 f3 f3 00 00 00 00 00 00 00 00
+  0x74ddb82e2a00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x74ddb82e2a80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==378518==ABORTING
+[poc] wifidog still running (no crash detected)

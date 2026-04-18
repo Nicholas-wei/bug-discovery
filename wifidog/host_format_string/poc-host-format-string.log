@@ -1,0 +1,872 @@
+[6][Mon Apr 13 21:39:27 2026][384452](conf.c:651) Reading configuration file '/home/wzq/work/open-source/wifidog-gateway/poc/wifidog-loopback-domain.conf'
+[7][Mon Apr 13 21:39:27 2026][384452](conf.c:697) Parsing token: GatewayID, value: testgw
+[7][Mon Apr 13 21:39:27 2026][384452](conf.c:697) Parsing token: GatewayInterface, value: lo
+[7][Mon Apr 13 21:39:27 2026][384452](conf.c:697) Parsing token: ExternalInterface, value: lo
+[7][Mon Apr 13 21:39:27 2026][384452](conf.c:697) Parsing token: GatewayAddress, value: 127.0.0.1
+[7][Mon Apr 13 21:39:27 2026][384452](conf.c:697) Parsing token: GatewayPort, value: 2060
+[7][Mon Apr 13 21:39:27 2026][384452](conf.c:697) Parsing token: Daemon, value: 0
+[7][Mon Apr 13 21:39:27 2026][384452](conf.c:697) Parsing token: CheckInterval, value: 1
+[7][Mon Apr 13 21:39:27 2026][384452](conf.c:697) Parsing token: HtmlMessageFile, value: wifidog-msg.html
+[7][Mon Apr 13 21:39:27 2026][384452](conf.c:697) Parsing token: WdctlSocket, value: /tmp/wdctl-wifidog-poc.sock
+[7][Mon Apr 13 21:39:27 2026][384452](conf.c:697) Parsing token: AuthServer, value: {
+[7][Mon Apr 13 21:39:27 2026][384452](conf.c:379) Adding 127.0.0.1:8081 (SSL: 443) / to the auth server list
+[7][Mon Apr 13 21:39:27 2026][384452](conf.c:404) Auth server added
+[7][Mon Apr 13 21:39:27 2026][384452](conf.c:697) Parsing token: FirewallRuleSet, value: global
+[7][Mon Apr 13 21:39:27 2026][384452](conf.c:439) Adding Firewall Rule Set global
+[7][Mon Apr 13 21:39:27 2026][384452](conf.c:475) p1 = [FirewallRule]; p2 = [allow tcp to example.com]
+[7][Mon Apr 13 21:39:27 2026][384452](conf.c:516) leftover: allow tcp to example.com
+[7][Mon Apr 13 21:39:27 2026][384452](conf.c:592) Adding Firewall Rule allow tcp port (null) to example.com
+[7][Mon Apr 13 21:39:27 2026][384452](conf.c:492) Firewall Rule Set global added.
+[4][Mon Apr 13 21:39:27 2026][384452](conf.c:1024) PopularServers not set in config file, this will become fatal in a future version.
+[7][Mon Apr 13 21:39:27 2026][384452](gateway.c:303) Initializing signal handlers
+[6][Mon Apr 13 21:39:27 2026][384452](gateway.c:362) Setting started_time
+[5][Mon Apr 13 21:39:27 2026][384452](gateway.c:395) Creating web server on 127.0.0.1:2060
+[7][Mon Apr 13 21:39:27 2026][384452](gateway.c:402) Assigning callbacks to web server
+[6][Mon Apr 13 21:39:27 2026][384452](util.c:315) Closing ICMP socket
+[6][Mon Apr 13 21:39:27 2026][384452](firewall.c:248) Removing Firewall rules
+[7][Mon Apr 13 21:39:27 2026][384452](fw_iptables.c:422) Destroying our iptables entries
+[7][Mon Apr 13 21:39:27 2026][384452](fw_iptables.c:429) Destroying chains in the MANGLE table
+[7][Mon Apr 13 21:39:27 2026][384452](fw_iptables.c:518) Attempting to destroy all mention of WD_lo_Trusted from mangle.PREROUTING
+[7][Mon Apr 13 21:39:27 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:27 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID 384480
+[7][Mon Apr 13 21:39:27 2026][384452](fw_iptables.c:518) Attempting to destroy all mention of WD_lo_Outgoing from mangle.PREROUTING
+[7][Mon Apr 13 21:39:27 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:27 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID 384481
+[7][Mon Apr 13 21:39:27 2026][384452](fw_iptables.c:518) Attempting to destroy all mention of WD_lo_Incoming from mangle.POSTROUTING
+[7][Mon Apr 13 21:39:27 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:27 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID 384482
+[7][Mon Apr 13 21:39:27 2026][384452](fw_iptables.c:114) Executing command: iptables -t mangle -F WD_lo_Trusted
+[7][Mon Apr 13 21:39:27 2026][384452](util.c:120) Waiting for PID 384483 to exit
+[7][Mon Apr 13 21:39:27 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:27 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:27 2026][384452](util.c:122) Process PID 384483 exited
+[7][Mon Apr 13 21:39:27 2026][384452](fw_iptables.c:123) iptables command failed(1): iptables -t mangle -F WD_lo_Trusted
+[7][Mon Apr 13 21:39:27 2026][384452](fw_iptables.c:114) Executing command: iptables -t mangle -F WD_lo_Outgoing
+[7][Mon Apr 13 21:39:27 2026][384452](util.c:120) Waiting for PID 384485 to exit
+[7][Mon Apr 13 21:39:27 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:27 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:27 2026][384452](util.c:122) Process PID 384485 exited
+[7][Mon Apr 13 21:39:27 2026][384452](fw_iptables.c:123) iptables command failed(1): iptables -t mangle -F WD_lo_Outgoing
+[7][Mon Apr 13 21:39:27 2026][384452](fw_iptables.c:114) Executing command: iptables -t mangle -F WD_lo_Incoming
+[7][Mon Apr 13 21:39:27 2026][384452](util.c:120) Waiting for PID 384486 to exit
+[7][Mon Apr 13 21:39:27 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:27 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:27 2026][384452](util.c:122) Process PID 384486 exited
+[7][Mon Apr 13 21:39:27 2026][384452](fw_iptables.c:123) iptables command failed(1): iptables -t mangle -F WD_lo_Incoming
+[7][Mon Apr 13 21:39:27 2026][384452](fw_iptables.c:114) Executing command: iptables -t mangle -X WD_lo_Trusted
+[7][Mon Apr 13 21:39:27 2026][384452](util.c:120) Waiting for PID 384487 to exit
+[7][Mon Apr 13 21:39:27 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:27 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:27 2026][384452](util.c:122) Process PID 384487 exited
+[7][Mon Apr 13 21:39:27 2026][384452](fw_iptables.c:123) iptables command failed(1): iptables -t mangle -X WD_lo_Trusted
+[7][Mon Apr 13 21:39:27 2026][384452](fw_iptables.c:114) Executing command: iptables -t mangle -X WD_lo_Outgoing
+[7][Mon Apr 13 21:39:27 2026][384452](util.c:120) Waiting for PID 384488 to exit
+[7][Mon Apr 13 21:39:27 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:27 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:27 2026][384452](util.c:122) Process PID 384488 exited
+[7][Mon Apr 13 21:39:27 2026][384452](fw_iptables.c:123) iptables command failed(1): iptables -t mangle -X WD_lo_Outgoing
+[7][Mon Apr 13 21:39:27 2026][384452](fw_iptables.c:114) Executing command: iptables -t mangle -X WD_lo_Incoming
+[7][Mon Apr 13 21:39:27 2026][384452](util.c:120) Waiting for PID 384489 to exit
+[7][Mon Apr 13 21:39:27 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:27 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:27 2026][384452](util.c:122) Process PID 384489 exited
+[7][Mon Apr 13 21:39:27 2026][384452](fw_iptables.c:123) iptables command failed(1): iptables -t mangle -X WD_lo_Incoming
+[7][Mon Apr 13 21:39:27 2026][384452](fw_iptables.c:451) Destroying chains in the NAT table
+[7][Mon Apr 13 21:39:27 2026][384452](fw_iptables.c:518) Attempting to destroy all mention of WD_lo_Outgoing from nat.PREROUTING
+[7][Mon Apr 13 21:39:27 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:27 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID 384490
+[7][Mon Apr 13 21:39:27 2026][384452](fw_iptables.c:114) Executing command: iptables -t nat -F WD_lo_AuthServs
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384491 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384491 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:123) iptables command failed(1): iptables -t nat -F WD_lo_AuthServs
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t nat -F WD_lo_Outgoing
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384494 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384494 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:123) iptables command failed(1): iptables -t nat -F WD_lo_Outgoing
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t nat -F WD_lo_Router
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384503 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384503 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:123) iptables command failed(1): iptables -t nat -F WD_lo_Router
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t nat -F WD_lo_Internet
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384509 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384509 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:123) iptables command failed(1): iptables -t nat -F WD_lo_Internet
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t nat -F WD_lo_Global
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384515 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384515 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:123) iptables command failed(1): iptables -t nat -F WD_lo_Global
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t nat -F WD_lo_Unknown
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384521 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384521 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:123) iptables command failed(1): iptables -t nat -F WD_lo_Unknown
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t nat -X WD_lo_AuthServs
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384527 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384527 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:123) iptables command failed(1): iptables -t nat -X WD_lo_AuthServs
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t nat -X WD_lo_Outgoing
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384532 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384532 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:123) iptables command failed(1): iptables -t nat -X WD_lo_Outgoing
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t nat -X WD_lo_Router
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384538 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384538 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:123) iptables command failed(1): iptables -t nat -X WD_lo_Router
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t nat -X WD_lo_Internet
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384544 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384544 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:123) iptables command failed(1): iptables -t nat -X WD_lo_Internet
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t nat -X WD_lo_Global
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384550 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384550 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:123) iptables command failed(1): iptables -t nat -X WD_lo_Global
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t nat -X WD_lo_Unknown
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384556 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384556 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:123) iptables command failed(1): iptables -t nat -X WD_lo_Unknown
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:475) Destroying chains in the FILTER table
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:518) Attempting to destroy all mention of WD_lo_Internet from filter.FORWARD
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID 384562
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t filter -F WD_lo_Internet
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384567 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384567 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:123) iptables command failed(1): iptables -t filter -F WD_lo_Internet
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t filter -F WD_lo_AuthServs
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384573 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384573 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:123) iptables command failed(1): iptables -t filter -F WD_lo_AuthServs
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t filter -F WD_lo_Locked
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384575 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384575 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:123) iptables command failed(1): iptables -t filter -F WD_lo_Locked
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t filter -F WD_lo_Global
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384576 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384576 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:123) iptables command failed(1): iptables -t filter -F WD_lo_Global
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t filter -F WD_lo_Validate
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384577 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384577 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:123) iptables command failed(1): iptables -t filter -F WD_lo_Validate
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t filter -F WD_lo_Known
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384578 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384578 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:123) iptables command failed(1): iptables -t filter -F WD_lo_Known
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t filter -F WD_lo_Unknown
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384579 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384579 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:123) iptables command failed(1): iptables -t filter -F WD_lo_Unknown
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t filter -X WD_lo_Internet
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384581 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384581 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:123) iptables command failed(1): iptables -t filter -X WD_lo_Internet
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t filter -X WD_lo_AuthServs
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384589 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384589 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:123) iptables command failed(1): iptables -t filter -X WD_lo_AuthServs
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t filter -X WD_lo_Locked
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384594 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384594 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:123) iptables command failed(1): iptables -t filter -X WD_lo_Locked
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t filter -X WD_lo_Global
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384604 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384604 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:123) iptables command failed(1): iptables -t filter -X WD_lo_Global
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t filter -X WD_lo_Validate
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384620 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384620 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:123) iptables command failed(1): iptables -t filter -X WD_lo_Validate
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t filter -X WD_lo_Known
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384621 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384621 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:123) iptables command failed(1): iptables -t filter -X WD_lo_Known
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t filter -X WD_lo_Unknown
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384624 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384624 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:123) iptables command failed(1): iptables -t filter -X WD_lo_Unknown
+[6][Mon Apr 13 21:39:28 2026][384452](util.c:299) Creating ICMP socket
+[6][Mon Apr 13 21:39:28 2026][384452](firewall.c:203) Initializing Firewall
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:261) Locking config
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:261) Config locked
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t mangle -N WD_lo_Trusted
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384632 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384632 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t mangle -N WD_lo_Outgoing
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384643 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384643 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t mangle -N WD_lo_Incoming
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384655 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384655 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t mangle -I PREROUTING 1 -i lo -j WD_lo_Outgoing
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384665 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384665 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t mangle -I PREROUTING 1 -i lo -j WD_lo_Trusted
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384678 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384678 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t mangle -I POSTROUTING 1 -o lo -j WD_lo_Incoming
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384684 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384684 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t nat -N WD_lo_Outgoing
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384690 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384690 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t nat -N WD_lo_Router
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384696 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384696 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t nat -N WD_lo_Internet
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384701 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384701 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t nat -N WD_lo_Global
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384705 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384705 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t nat -N WD_lo_Unknown
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384711 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384711 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t nat -N WD_lo_AuthServs
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384719 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384719 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t nat -A PREROUTING -i lo -j WD_lo_Outgoing
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384724 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384724 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t nat -A WD_lo_Outgoing -d 127.0.0.1 -j WD_lo_Router
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384725 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384725 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t nat -A WD_lo_Router -j ACCEPT
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384726 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384726 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t nat -A WD_lo_Outgoing -j WD_lo_Internet
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384727 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384727 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t nat -A WD_lo_Internet -m mark --mark 0x2 -j ACCEPT
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384728 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384728 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t nat -A WD_lo_Internet -m mark --mark 0x1 -j ACCEPT
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384729 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384729 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t nat -A WD_lo_Internet -j WD_lo_Unknown
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384735 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384735 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t nat -A WD_lo_Unknown -j WD_lo_AuthServs
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384736 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384736 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t nat -A WD_lo_Unknown -j WD_lo_Global
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384737 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384737 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t nat -A WD_lo_Unknown -p tcp --dport 80 -j REDIRECT --to-ports 2060
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384738 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384738 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t filter -N WD_lo_Internet
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384739 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384739 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t filter -N WD_lo_AuthServs
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384740 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384740 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t filter -N WD_lo_Locked
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384741 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384741 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t filter -N WD_lo_Global
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384743 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384743 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t filter -N WD_lo_Validate
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384750 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384750 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t filter -N WD_lo_Known
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384756 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384756 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t filter -N WD_lo_Unknown
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384762 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384762 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t filter -I FORWARD -i lo -j WD_lo_Internet
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384768 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384768 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t filter -A WD_lo_Internet -m state --state INVALID -j DROP
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384774 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384774 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t filter -A WD_lo_Internet -o lo -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384780 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384780 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t filter -A WD_lo_Internet -j WD_lo_AuthServs
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384787 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384787 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t filter -A WD_lo_Internet -m mark --mark 0x254 -j WD_lo_Locked
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384793 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384793 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:210) Load ruleset locked-users into table filter, chain WD_$ID$_Locked
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:221) Ruleset locked-users loaded into table filter, chain WD_$ID$_Locked
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t filter -A WD_lo_Internet -j WD_lo_Global
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384800 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384800 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:210) Load ruleset global into table filter, chain WD_$ID$_Global
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:215) Loading rule "-t filter -A WD_$ID$_Global -d example.com -p tcp -j ACCEPT" into table filter, chain WD_$ID$_Global
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t filter -A WD_lo_Global -d example.com -p tcp -j ACCEPT
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384806 to exit
+iptables v1.8.10 (nf_tables): host/network `example.com' not found
+Try `iptables -h' or 'iptables --help' for more information.
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384806 exited
+[3][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:121) iptables command failed(2): iptables -t filter -A WD_lo_Global -d example.com -p tcp -j ACCEPT
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:221) Ruleset global loaded into table filter, chain WD_$ID$_Global
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:210) Load ruleset global into table nat, chain WD_$ID$_Global
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:215) Loading rule "-t nat -A WD_$ID$_Global -d example.com -p tcp -j ACCEPT" into table nat, chain WD_$ID$_Global
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t nat -A WD_lo_Global -d example.com -p tcp -j ACCEPT
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384813 to exit
+iptables v1.8.10 (nf_tables): host/network `example.com' not found
+Try `iptables -h' or 'iptables --help' for more information.
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384813 exited
+[3][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:121) iptables command failed(2): iptables -t nat -A WD_lo_Global -d example.com -p tcp -j ACCEPT
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:221) Ruleset global loaded into table nat, chain WD_$ID$_Global
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t filter -A WD_lo_Internet -m mark --mark 0x1 -j WD_lo_Validate
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384815 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384815 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:210) Load ruleset validating-users into table filter, chain WD_$ID$_Validate
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:221) Ruleset validating-users loaded into table filter, chain WD_$ID$_Validate
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t filter -A WD_lo_Internet -m mark --mark 0x2 -j WD_lo_Known
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384816 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384816 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:210) Load ruleset known-users into table filter, chain WD_$ID$_Known
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:221) Ruleset known-users loaded into table filter, chain WD_$ID$_Known
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t filter -A WD_lo_Internet -j WD_lo_Unknown
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384817 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384817 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:210) Load ruleset unknown-users into table filter, chain WD_$ID$_Unknown
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:221) Ruleset unknown-users loaded into table filter, chain WD_$ID$_Unknown
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t filter -A WD_lo_Unknown -j REJECT --reject-with icmp-port-unreachable
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384818 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384818 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:406) Unlocking config
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:406) Config unlocked
+[5][Mon Apr 13 21:39:28 2026][384452](gateway.c:444) Waiting for connections
+[7][Mon Apr 13 21:39:28 2026][384452](ping_thread.c:74) Running ping()
+[7][Mon Apr 13 21:39:28 2026][384452](ping_thread.c:108) Entering ping()
+[6][Mon Apr 13 21:39:28 2026][384452](gateway.c:469) Received connection from 127.0.0.1, spawning worker thread
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:156) Locking config
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:156) Config locked
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:201) Level 1: Calculated 1 auth servers in list
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:217) Level 1: Resolving auth server [127.0.0.1]
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:149) Locking wd_gethostbyname()
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:149) wd_gethostbyname() locked
+[7][Mon Apr 13 21:39:28 2026][384452](wdctl_thread.c:129) Starting wdctl.
+[7][Mon Apr 13 21:39:28 2026][384452](wdctl_thread.c:132) Socket name: /tmp/wdctl-wifidog-poc.sock
+[6][Mon Apr 13 21:39:28 2026][384452](gateway.c:469) Received connection from 127.0.0.1, spawning worker thread
+[7][Mon Apr 13 21:39:28 2026][384452](wdctl_thread.c:134) Creating socket
+[7][Mon Apr 13 21:39:28 2026][384452](wdctl_thread.c:89) Got unix socket 7
+[7][Mon Apr 13 21:39:28 2026][384452](wdctl_thread.c:94) Filling sockaddr_un
+[7][Mon Apr 13 21:39:28 2026][384452](wdctl_thread.c:98) Binding socket (/tmp/wdctl-wifidog-poc.sock) (27)
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:162) Unlocking wd_gethostbyname()
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:162) wd_gethostbyname() unlocked
+[6][Mon Apr 13 21:39:28 2026][384452](wd_util.c:69) ONLINE status became ON
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:274) Level 1: Resolving auth server [127.0.0.1] succeeded = [127.0.0.1]
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:281) Level 1: Updating last_ip IP of server [127.0.0.1] to [127.0.0.1]
+[6][Mon Apr 13 21:39:28 2026][384452](firewall.c:227) Clearing the authservers list
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t filter -F WD_lo_AuthServs
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384824 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](httpd_thread.c:65) Processing request from 127.0.0.1
+[7][Mon Apr 13 21:39:28 2026][384452](httpd_thread.c:66) Calling httpdProcessRequest() for 127.0.0.1
+[7][Mon Apr 13 21:39:28 2026][384452](httpd_thread.c:65) Processing request from 127.0.0.1
+[7][Mon Apr 13 21:39:28 2026][384452](httpd_thread.c:68) Returned from httpdProcessRequest() for 127.0.0.1
+[7][Mon Apr 13 21:39:28 2026][384452](httpd_thread.c:66) [7][Mon Apr 13 21:39:28 2026][384452](httpd_thread.c:73) Closing connection with 127.0.0.1
+Calling httpdProcessRequest() for 127.0.0.1
+[7][Mon Apr 13 21:39:28 2026][384452](wd_util.c:196) Locking client list
+[7][Mon Apr 13 21:39:28 2026][384452](wd_util.c:196) Client list locked
+[7][Mon Apr 13 21:39:28 2026][384452](wd_util.c:200) Unlocking client list
+[7][Mon Apr 13 21:39:28 2026][384452](wd_util.c:200) Client list unlocked
+[7][Mon Apr 13 21:39:28 2026][384452](wd_util.c:231) Locking config
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384824 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t nat -F WD_lo_AuthServs
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384825 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384825 exited
+[6][Mon Apr 13 21:39:28 2026][384452](firewall.c:236) Setting the authservers list
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t filter -A WD_lo_AuthServs -d 127.0.0.1 -j ACCEPT
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384826 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384826 exited
+[7][Mon Apr 13 21:39:28 2026][384452](fw_iptables.c:114) Executing command: iptables -t nat -A WD_lo_AuthServs -d 127.0.0.1 -j ACCEPT
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:120) Waiting for PID 384827 to exit
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID -1
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:122) Process PID 384827 exited
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:312) Level 1: Connecting to auth server 127.0.0.1:8081
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:341) Level 1: Successfully connected to auth server 127.0.0.1:8081
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:158) Unlocking config
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:158) Config unlocked
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:164) Connected to auth server
+[6][Mon Apr 13 21:39:28 2026][384452](wd_util.c:116) AUTH_ONLINE status became ON
+[7][Mon Apr 13 21:39:28 2026][384452](wd_util.c:231) Config locked
+[7][Mon Apr 13 21:39:28 2026][384452](wd_util.c:237) Unlocking config
+[7][Mon Apr 13 21:39:28 2026][384452](wd_util.c:237) Config unlocked
+[7][Mon Apr 13 21:39:28 2026][384452](simple_http.c:77) Sending HTTP request to auth server: [GET /ping/?gw_id=testgw&sys_uptime=12489&sys_memfree=6646456&sys_load=4.55&wifidog_uptime=1 HTTP/1.0
+User-Agent: WiFiDog 1.3.0
+Host: 127.0.0.1
+
+]
+
+[7][Mon Apr 13 21:39:28 2026][384452](simple_http.c:87) Reading response
+[7][Mon Apr 13 21:39:28 2026][384452](httpd_thread.c:68) Returned from httpdProcessRequest() for 127.0.0.1
+[7][Mon Apr 13 21:39:28 2026][384452](httpd_thread.c:73) Closing connection with 127.0.0.1
+[7][Mon Apr 13 21:39:28 2026][384452](simple_http.c:111) Read 141 bytes
+[7][Mon Apr 13 21:39:28 2026][384452](simple_http.c:124) HTTP Response from Server: [HTTP/1.0 200 OK
+Server: BaseHTTP/0.6 Python/3.12.3
+Date: Mon, 13 Apr 2026 13:39:28 GMT
+Content-Type: text/plain
+Content-Length: 4
+
+Pong]
+[7][Mon Apr 13 21:39:28 2026][384452](ping_thread.c:198) Auth Server Says: Pong
+[6][Mon Apr 13 21:39:28 2026][384452](gateway.c:469) Received connection from 127.0.0.1, spawning worker thread
+[7][Mon Apr 13 21:39:28 2026][384452](httpd_thread.c:65) Processing request from 127.0.0.1
+[7][Mon Apr 13 21:39:28 2026][384452](httpd_thread.c:66) Calling httpdProcessRequest() for 127.0.0.1
+[7][Mon Apr 13 21:39:28 2026][384452](wd_util.c:196) Locking client list
+[7][Mon Apr 13 21:39:28 2026][384452](wd_util.c:196) Client list locked
+[7][Mon Apr 13 21:39:28 2026][384452](wd_util.c:200) Unlocking client list
+[7][Mon Apr 13 21:39:28 2026][384452](wd_util.c:200) Client list unlocked
+[7][Mon Apr 13 21:39:28 2026][384452](wd_util.c:231) Locking config
+[7][Mon Apr 13 21:39:28 2026][384452](wd_util.c:231) Config locked
+[7][Mon Apr 13 21:39:28 2026][384452](wd_util.c:237) Unlocking config
+[7][Mon Apr 13 21:39:28 2026][384452](wd_util.c:237) Config unlocked
+[7][Mon Apr 13 21:39:28 2026][384452](httpd_thread.c:68) Returned from httpdProcessRequest() for 127.0.0.1
+[7][Mon Apr 13 21:39:28 2026][384452](httpd_thread.c:73) Closing connection with 127.0.0.1
+[6][Mon Apr 13 21:39:28 2026][384452](gateway.c:469) Received connection from 127.0.0.1, spawning worker thread
+[7][Mon Apr 13 21:39:28 2026][384452](httpd_thread.c:65) Processing request from 127.0.0.1
+[7][Mon Apr 13 21:39:28 2026][384452](httpd_thread.c:66) Calling httpdProcessRequest() for 127.0.0.1
+[7][Mon Apr 13 21:39:28 2026][384452](wd_util.c:196) Locking client list
+[7][Mon Apr 13 21:39:28 2026][384452](wd_util.c:196) Client list locked
+[7][Mon Apr 13 21:39:28 2026][384452](wd_util.c:200) Unlocking client list
+[7][Mon Apr 13 21:39:28 2026][384452](wd_util.c:200) Client list unlocked
+[7][Mon Apr 13 21:39:28 2026][384452](wd_util.c:231) Locking config
+[7][Mon Apr 13 21:39:28 2026][384452](wd_util.c:231) Config locked
+[7][Mon Apr 13 21:39:28 2026][384452](wd_util.c:237) Unlocking config
+[7][Mon Apr 13 21:39:28 2026][384452](wd_util.c:237) Config unlocked
+[7][Mon Apr 13 21:39:28 2026][384452](httpd_thread.c:68) Returned from httpdProcessRequest() for 127.0.0.1
+[7][Mon Apr 13 21:39:28 2026][384452](httpd_thread.c:73) Closing connection with 127.0.0.1
+[6][Mon Apr 13 21:39:28 2026][384452](gateway.c:469) Received connection from 127.0.0.1, spawning worker thread
+[7][Mon Apr 13 21:39:28 2026][384452](httpd_thread.c:65) Processing request from 127.0.0.1
+[7][Mon Apr 13 21:39:28 2026][384452](httpd_thread.c:66) Calling httpdProcessRequest() for 127.0.0.1
+[7][Mon Apr 13 21:39:28 2026][384452](wd_util.c:196) Locking client list
+[7][Mon Apr 13 21:39:28 2026][384452](wd_util.c:196) Client list locked
+[7][Mon Apr 13 21:39:28 2026][384452](wd_util.c:200) Unlocking client list
+[7][Mon Apr 13 21:39:28 2026][384452](wd_util.c:200) Client list unlocked
+[7][Mon Apr 13 21:39:28 2026][384452](wd_util.c:231) Locking config
+[7][Mon Apr 13 21:39:28 2026][384452](wd_util.c:231) Config locked
+[7][Mon Apr 13 21:39:28 2026][384452](wd_util.c:237) Unlocking config
+[7][Mon Apr 13 21:39:28 2026][384452](wd_util.c:237) Config unlocked
+[7][Mon Apr 13 21:39:28 2026][384452](httpd_thread.c:68) Returned from httpdProcessRequest() for 127.0.0.1
+[7][Mon Apr 13 21:39:28 2026][384452](httpd_thread.c:73) Closing connection with 127.0.0.1
+[7][Mon Apr 13 21:39:28 2026][384452](auth.c:79) Running fw_counter()
+[7][Mon Apr 13 21:39:28 2026][384452](ping_thread.c:74) Running ping()
+[7][Mon Apr 13 21:39:28 2026][384452](ping_thread.c:108) Entering ping()
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:156) Locking config
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:156) Config locked
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:201) Level 1: Calculated 1 auth servers in list
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:217) Level 1: Resolving auth server [127.0.0.1]
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:149) Locking wd_gethostbyname()
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:149) wd_gethostbyname() locked
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:162) Unlocking wd_gethostbyname()
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:162) wd_gethostbyname() unlocked
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:274) Level 1: Resolving auth server [127.0.0.1] succeeded = [127.0.0.1]
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:312) Level 1: Connecting to auth server 127.0.0.1:8081
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:341) Level 1: Successfully connected to auth server 127.0.0.1:8081
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:158) Unlocking config
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:158) Config unlocked
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:164) Connected to auth server
+[7][Mon Apr 13 21:39:28 2026][384452](simple_http.c:77) Sending HTTP request to auth server: [GET /ping/?gw_id=testgw&sys_uptime=12490&sys_memfree=6646376&sys_load=4.43&wifidog_uptime=1 HTTP/1.0
+User-Agent: WiFiDog 1.3.0
+Host: 127.0.0.1
+
+]
+
+[7][Mon Apr 13 21:39:28 2026][384452](simple_http.c:87) Reading response
+[7][Mon Apr 13 21:39:28 2026][384452](simple_http.c:111) Read 141 bytes
+[7][Mon Apr 13 21:39:28 2026][384452](simple_http.c:124) HTTP Response from Server: [HTTP/1.0 200 OK
+Server: BaseHTTP/0.6 Python/3.12.3
+Date: Mon, 13 Apr 2026 13:39:29 GMT
+Content-Type: text/plain
+Content-Length: 4
+
+Pong]
+[7][Mon Apr 13 21:39:28 2026][384452](ping_thread.c:198) Auth Server Says: Pong
+[7][Mon Apr 13 21:39:28 2026][384452](ping_thread.c:74) Running ping()
+[7][Mon Apr 13 21:39:28 2026][384452](ping_thread.c:108) Entering ping()
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:156) Locking config
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:156) Config locked
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:201) Level 1: Calculated 1 auth servers in list
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:217) Level 1: Resolving auth server [127.0.0.1]
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:149) Locking wd_gethostbyname()
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:149) wd_gethostbyname() locked
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:162) Unlocking wd_gethostbyname()
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:162) wd_gethostbyname() unlocked
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:274) Level 1: Resolving auth server [127.0.0.1] succeeded = [127.0.0.1]
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:312) Level 1: Connecting to auth server 127.0.0.1:8081
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:341) Level 1: Successfully connected to auth server 127.0.0.1:8081
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:158) Unlocking config
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:158) Config unlocked
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:164) Connected to auth server
+[7][Mon Apr 13 21:39:28 2026][384452](simple_http.c:77) Sending HTTP request to auth server: [GET /ping/?gw_id=testgw&sys_uptime=12490&sys_memfree=6646376&sys_load=4.43&wifidog_uptime=1 HTTP/1.0
+User-Agent: WiFiDog 1.3.0
+Host: 127.0.0.1
+
+]
+
+[7][Mon Apr 13 21:39:28 2026][384452](simple_http.c:87) Reading response
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID 385451
+[7][Mon Apr 13 21:39:28 2026][384452](simple_http.c:111) Read 141 bytes
+[7][Mon Apr 13 21:39:28 2026][384452](simple_http.c:124) HTTP Response from Server: [HTTP/1.0 200 OK
+Server: BaseHTTP/0.6 Python/3.12.3
+Date: Mon, 13 Apr 2026 13:39:29 GMT
+Content-Type: text/plain
+Content-Length: 4
+
+Pong]
+[7][Mon Apr 13 21:39:28 2026][384452](ping_thread.c:198) Auth Server Says: Pong
+[7][Mon Apr 13 21:39:28 2026][384452](ping_thread.c:74) Running ping()
+[7][Mon Apr 13 21:39:28 2026][384452](ping_thread.c:108) Entering ping()
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:156) Locking config
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:156) Config locked
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:201) Level 1: Calculated 1 auth servers in list
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:217) Level 1: Resolving auth server [127.0.0.1]
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:149) Locking wd_gethostbyname()
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:149) wd_gethostbyname() locked
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:162) Unlocking wd_gethostbyname()
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:162) wd_gethostbyname() unlocked
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:274) Level 1: Resolving auth server [127.0.0.1] succeeded = [127.0.0.1]
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:312) Level 1: Connecting to auth server 127.0.0.1:8081
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:341) Level 1: Successfully connected to auth server 127.0.0.1:8081
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:158) Unlocking config
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:158) Config unlocked
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:164) Connected to auth server
+[7][Mon Apr 13 21:39:28 2026][384452](simple_http.c:77) Sending HTTP request to auth server: [GET /ping/?gw_id=testgw&sys_uptime=12490&sys_memfree=6645872&sys_load=4.43&wifidog_uptime=1 HTTP/1.0
+User-Agent: WiFiDog 1.3.0
+Host: 127.0.0.1
+
+]
+
+[7][Mon Apr 13 21:39:28 2026][384452](simple_http.c:87) Reading response
+[7][Mon Apr 13 21:39:28 2026][384452](simple_http.c:111) Read 137 bytes
+[7][Mon Apr 13 21:39:28 2026][384452](simple_http.c:111) Read 4 bytes
+[7][Mon Apr 13 21:39:28 2026][384452](simple_http.c:124) HTTP Response from Server: [HTTP/1.0 200 OK
+Server: BaseHTTP/0.6 Python/3.12.3
+Date: Mon, 13 Apr 2026 13:39:29 GMT
+Content-Type: text/plain
+Content-Length: 4
+
+Pong]
+[7][Mon Apr 13 21:39:28 2026][384452](ping_thread.c:198) Auth Server Says: Pong
+[7][Mon Apr 13 21:39:28 2026][384452](ping_thread.c:74) Running ping()
+[7][Mon Apr 13 21:39:28 2026][384452](ping_thread.c:108) Entering ping()
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:156) Locking config
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:156) Config locked
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:201) Level 1: Calculated 1 auth servers in list
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:217) Level 1: Resolving auth server [127.0.0.1]
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:149) Locking wd_gethostbyname()
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:149) wd_gethostbyname() locked
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:162) Unlocking wd_gethostbyname()
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:162) wd_gethostbyname() unlocked
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:274) Level 1: Resolving auth server [127.0.0.1] succeeded = [127.0.0.1]
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:312) Level 1: Connecting to auth server 127.0.0.1:8081
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:341) Level 1: Successfully connected to auth server 127.0.0.1:8081
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:158) Unlocking config
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:158) Config unlocked
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:164) Connected to auth server
+[7][Mon Apr 13 21:39:28 2026][384452](simple_http.c:77) Sending HTTP request to auth server: [GET /ping/?gw_id=testgw&sys_uptime=12490&sys_memfree=6645872&sys_load=4.43&wifidog_uptime=1 HTTP/1.0
+User-Agent: WiFiDog 1.3.0
+Host: 127.0.0.1
+
+]
+
+[7][Mon Apr 13 21:39:28 2026][384452](simple_http.c:87) Reading response
+[7][Mon Apr 13 21:39:28 2026][384452](simple_http.c:111) Read 141 bytes
+[7][Mon Apr 13 21:39:28 2026][384452](simple_http.c:124) HTTP Response from Server: [HTTP/1.0 200 OK
+Server: BaseHTTP/0.6 Python/3.12.3
+Date: Mon, 13 Apr 2026 13:39:29 GMT
+Content-Type: text/plain
+Content-Length: 4
+
+Pong]
+[7][Mon Apr 13 21:39:28 2026][384452](ping_thread.c:198) Auth Server Says: Pong
+[7][Mon Apr 13 21:39:28 2026][384452](ping_thread.c:74) Running ping()
+[7][Mon Apr 13 21:39:28 2026][384452](ping_thread.c:108) Entering ping()
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:156) Locking config
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:156) Config locked
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:201) Level 1: Calculated 1 auth servers in list
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:217) Level 1: Resolving auth server [127.0.0.1]
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:149) Locking wd_gethostbyname()
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:149) wd_gethostbyname() locked
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:162) Unlocking wd_gethostbyname()
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:162) wd_gethostbyname() unlocked
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:274) Level 1: Resolving auth server [127.0.0.1] succeeded = [127.0.0.1]
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:312) Level 1: Connecting to auth server 127.0.0.1:8081
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:341) Level 1: Successfully connected to auth server 127.0.0.1:8081
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:158) Unlocking config
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:158) Config unlocked
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:164) Connected to auth server
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:28 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID 385453
+[7][Mon Apr 13 21:39:28 2026][384452](simple_http.c:77) Sending HTTP request to auth server: [GET /ping/?gw_id=testgw&sys_uptime=12490&sys_memfree=6645872&sys_load=4.43&wifidog_uptime=1 HTTP/1.0
+User-Agent: WiFiDog 1.3.0
+Host: 127.0.0.1
+
+]
+
+[7][Mon Apr 13 21:39:28 2026][384452](simple_http.c:87) Reading response
+[7][Mon Apr 13 21:39:28 2026][384452](firewall.c:267) Locking client list
+[7][Mon Apr 13 21:39:28 2026][384452](firewall.c:267) Client list locked
+[7][Mon Apr 13 21:39:28 2026][384452](firewall.c:275) Unlocking client list
+[7][Mon Apr 13 21:39:28 2026][384452](firewall.c:275) Client list unlocked
+[7][Mon Apr 13 21:39:28 2026][384452](auth.c:79) Running fw_counter()
+[7][Mon Apr 13 21:39:28 2026][384452](simple_http.c:111) Read 141 bytes
+[7][Mon Apr 13 21:39:28 2026][384452](simple_http.c:124) HTTP Response from Server: [HTTP/1.0 200 OK
+Server: BaseHTTP/0.6 Python/3.12.3
+Date: Mon, 13 Apr 2026 13:39:29 GMT
+Content-Type: text/plain
+Content-Length: 4
+
+Pong]
+[7][Mon Apr 13 21:39:28 2026][384452](ping_thread.c:198) Auth Server Says: Pong
+[7][Mon Apr 13 21:39:28 2026][384452](ping_thread.c:74) Running ping()
+[7][Mon Apr 13 21:39:28 2026][384452](ping_thread.c:108) Entering ping()
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:156) Locking config
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:156) Config locked
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:201) Level 1: Calculated 1 auth servers in list
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:217) Level 1: Resolving auth server [127.0.0.1]
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:149) Locking wd_gethostbyname()
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:149) wd_gethostbyname() locked
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:162) Unlocking wd_gethostbyname()
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:162) wd_gethostbyname() unlocked
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:274) Level 1: Resolving auth server [127.0.0.1] succeeded = [127.0.0.1]
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:312) Level 1: Connecting to auth server 127.0.0.1:8081
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:341) Level 1: Successfully connected to auth server 127.0.0.1:8081
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:158) Unlocking config
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:158) Config unlocked
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:164) Connected to auth server
+[7][Mon Apr 13 21:39:28 2026][384452](simple_http.c:77) Sending HTTP request to auth server: [GET /ping/?gw_id=testgw&sys_uptime=12490&sys_memfree=6645872&sys_load=4.43&wifidog_uptime=1 HTTP/1.0
+User-Agent: WiFiDog 1.3.0
+Host: 127.0.0.1
+
+]
+
+[7][Mon Apr 13 21:39:28 2026][384452](simple_http.c:87) Reading response
+[7][Mon Apr 13 21:39:28 2026][384452](simple_http.c:111) Read 141 bytes
+[7][Mon Apr 13 21:39:28 2026][384452](simple_http.c:124) HTTP Response from Server: [HTTP/1.0 200 OK
+Server: BaseHTTP/0.6 Python/3.12.3
+Date: Mon, 13 Apr 2026 13:39:29 GMT
+Content-Type: text/plain
+Content-Length: 4
+
+Pong]
+[7][Mon Apr 13 21:39:28 2026][384452](ping_thread.c:198) Auth Server Says: Pong
+[7][Mon Apr 13 21:39:28 2026][384452](ping_thread.c:74) Running ping()
+[7][Mon Apr 13 21:39:28 2026][384452](ping_thread.c:108) Entering ping()
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:156) Locking config
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:156) Config locked
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:201) Level 1: Calculated 1 auth servers in list
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:217) Level 1: Resolving auth server [127.0.0.1]
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:149) Locking wd_gethostbyname()
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:149) wd_gethostbyname() locked
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:162) Unlocking wd_gethostbyname()
+[7][Mon Apr 13 21:39:28 2026][384452](util.c:162) wd_gethostbyname() unlocked
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:274) Level 1: Resolving auth server [127.0.0.1] succeeded = [127.0.0.1]
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:312) Level 1: Connecting to auth server 127.0.0.1:8081
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:341) Level 1: Successfully connected to auth server 127.0.0.1:8081
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:158) Unlocking config
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:158) Config unlocked
+[7][Mon Apr 13 21:39:28 2026][384452](centralserver.c:164) Connected to auth server
+[7][Mon Apr 13 21:39:28 2026][384452](simple_http.c:77) Sending HTTP request to auth server: [GET /ping/?gw_id=testgw&sys_uptime=12490&sys_memfree=6645872&sys_load=4.43&wifidog_uptime=1 HTTP/1.0
+User-Agent: WiFiDog 1.3.0
+Host: 127.0.0.1
+
+]
+
+[7][Mon Apr 13 21:39:28 2026][384452](simple_http.c:87) Reading response
+[7][Mon Apr 13 21:39:29 2026][384452](simple_http.c:111) Read 141 bytes
+[7][Mon Apr 13 21:39:29 2026][384452](simple_http.c:124) HTTP Response from Server: [HTTP/1.0 200 OK
+Server: BaseHTTP/0.6 Python/3.12.3
+Date: Mon, 13 Apr 2026 13:39:29 GMT
+Content-Type: text/plain
+Content-Length: 4
+
+Pong]
+[7][Mon Apr 13 21:39:29 2026][384452](ping_thread.c:198) Auth Server Says: Pong
+[7][Mon Apr 13 21:39:29 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:29 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID 385456
+[6][Mon Apr 13 21:39:29 2026][384452](gateway.c:469) Received connection from 127.0.0.1, spawning worker thread
+[7][Mon Apr 13 21:39:29 2026][384452](httpd_thread.c:65) Processing request from 127.0.0.1
+[7][Mon Apr 13 21:39:29 2026][384452](httpd_thread.c:66) Calling httpdProcessRequest() for 127.0.0.1
+[6][Mon Apr 13 21:39:29 2026][384452](http.c:112) Failed to retrieve MAC address for ip 127.0.0.1, so not putting in the login request
+[6][Mon Apr 13 21:39:29 2026][384452](http.c:125) Check host fmt$ID$-%08x-%08x-%08x.example.com is in whitelist or not
+[6][Mon Apr 13 21:39:29 2026][384452](http.c:130) rule mask example.com
+[6][Mon Apr 13 21:39:29 2026][384452](http.c:144) allow subdomain
+[7][Mon Apr 13 21:39:29 2026][384452](firewall.c:100) Allowing fmt$ID$-%08x-%08x-%08x.example.com
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==384452==ERROR: AddressSanitizer: SEGV on unknown address 0x000000005290 (pc 0x76b15cd8b7dd bp 0x76b1559de980 sp 0x76b1559de008 T9)
+==384452==The signal is caused by a READ memory access.
+[7][Mon Apr 13 21:39:29 2026][384452](gateway.c:247) Handler for SIGCHLD called. Trying to reap a child
+[7][Mon Apr 13 21:39:29 2026][384452](gateway.c:251) Handler for SIGCHLD reaped child PID 385461
+[7][Mon Apr 13 21:39:29 2026][384452](firewall.c:267) Locking client list
+[7][Mon Apr 13 21:39:29 2026][384452](firewall.c:267) Client list locked
+[7][Mon Apr 13 21:39:29 2026][384452](firewall.c:275) Unlocking client list
+[7][Mon Apr 13 21:39:29 2026][384452](firewall.c:275) Client list unlocked
+    #0 0x76b15cd8b7dd  (/lib/x86_64-linux-gnu/libc.so.6+0x18b7dd) (BuildId: 8e9fd827446c24067541ac5390e6f527fb5947bb)
+    #1 0x76b15cc68986  (/lib/x86_64-linux-gnu/libc.so.6+0x68986) (BuildId: 8e9fd827446c24067541ac5390e6f527fb5947bb)
+    #2 0x76b15cc69244  (/lib/x86_64-linux-gnu/libc.so.6+0x69244) (BuildId: 8e9fd827446c24067541ac5390e6f527fb5947bb)
+    #3 0x76b15cc8f8bf  (/lib/x86_64-linux-gnu/libc.so.6+0x8f8bf) (BuildId: 8e9fd827446c24067541ac5390e6f527fb5947bb)
+    #4 0x5fef1a93d84a  (/home/wzq/work/open-source/wifidog-gateway/src/.libs/wifidog+0x5f84a) (BuildId: 41315f3ec8f6e73ed1d57483273bff68dca18f5e)
+    #5 0x5fef1a9f9259  (/home/wzq/work/open-source/wifidog-gateway/src/.libs/wifidog+0x11b259) (BuildId: 41315f3ec8f6e73ed1d57483273bff68dca18f5e)
+    #6 0x5fef1aa03a46  (/home/wzq/work/open-source/wifidog-gateway/src/.libs/wifidog+0x125a46) (BuildId: 41315f3ec8f6e73ed1d57483273bff68dca18f5e)
+    #7 0x5fef1aa0217a  (/home/wzq/work/open-source/wifidog-gateway/src/.libs/wifidog+0x12417a) (BuildId: 41315f3ec8f6e73ed1d57483273bff68dca18f5e)
+    #8 0x5fef1aa03bce  (/home/wzq/work/open-source/wifidog-gateway/src/.libs/wifidog+0x125bce) (BuildId: 41315f3ec8f6e73ed1d57483273bff68dca18f5e)
+    #9 0x5fef1a9f2f39  (/home/wzq/work/open-source/wifidog-gateway/src/.libs/wifidog+0x114f39) (BuildId: 41315f3ec8f6e73ed1d57483273bff68dca18f5e)
+    #10 0x76b15d07beec  (/home/wzq/work/open-source/wifidog-gateway/libhttpd/.libs/libhttpd.so.0+0x8eec) (BuildId: 0430eb1d02e106fa05d9fcbe64c2caa5e6529f6f)
+    #11 0x76b15d0807e5  (/home/wzq/work/open-source/wifidog-gateway/libhttpd/.libs/libhttpd.so.0+0xd7e5) (BuildId: 0430eb1d02e106fa05d9fcbe64c2caa5e6529f6f)
+    #12 0x5fef1a9f958b  (/home/wzq/work/open-source/wifidog-gateway/src/.libs/wifidog+0x11b58b) (BuildId: 41315f3ec8f6e73ed1d57483273bff68dca18f5e)
+    #13 0x5fef1a9affcc  (/home/wzq/work/open-source/wifidog-gateway/src/.libs/wifidog+0xd1fcc) (BuildId: 41315f3ec8f6e73ed1d57483273bff68dca18f5e)
+    #14 0x76b15cc9caa3  (/lib/x86_64-linux-gnu/libc.so.6+0x9caa3) (BuildId: 8e9fd827446c24067541ac5390e6f527fb5947bb)
+    #15 0x76b15cd29c6b  (/lib/x86_64-linux-gnu/libc.so.6+0x129c6b) (BuildId: 8e9fd827446c24067541ac5390e6f527fb5947bb)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV (/lib/x86_64-linux-gnu/libc.so.6+0x18b7dd) (BuildId: 8e9fd827446c24067541ac5390e6f527fb5947bb) 
+Thread T9 created by T0 here:
+    #0 0x5fef1a997e55  (/home/wzq/work/open-source/wifidog-gateway/src/.libs/wifidog+0xb9e55) (BuildId: 41315f3ec8f6e73ed1d57483273bff68dca18f5e)
+    #1 0x5fef1a9f2668  (/home/wzq/work/open-source/wifidog-gateway/src/.libs/wifidog+0x114668) (BuildId: 41315f3ec8f6e73ed1d57483273bff68dca18f5e)
+    #2 0x5fef1a9f1dd8  (/home/wzq/work/open-source/wifidog-gateway/src/.libs/wifidog+0x113dd8) (BuildId: 41315f3ec8f6e73ed1d57483273bff68dca18f5e)
+    #3 0x76b15cc2a1c9  (/lib/x86_64-linux-gnu/libc.so.6+0x2a1c9) (BuildId: 8e9fd827446c24067541ac5390e6f527fb5947bb)
+    #4 0x76b15cc2a28a  (/lib/x86_64-linux-gnu/libc.so.6+0x2a28a) (BuildId: 8e9fd827446c24067541ac5390e6f527fb5947bb)
+    #5 0x5fef1a917694  (/home/wzq/work/open-source/wifidog-gateway/src/.libs/wifidog+0x39694) (BuildId: 41315f3ec8f6e73ed1d57483273bff68dca18f5e)
+
+==384452==ABORTING

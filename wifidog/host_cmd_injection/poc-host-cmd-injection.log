@@ -1,0 +1,10 @@
+iptables v1.8.10 (nf_tables): host/network `example.com' not found
+Try `iptables -h' or 'iptables --help' for more information.
+iptables v1.8.10 (nf_tables): host/network `example.com' not found
+Try `iptables -h' or 'iptables --help' for more information.
+iptables v1.8.10 (nf_tables): host/network `pwn' not found
+Try `iptables -h' or 'iptables --help' for more information.
+iptables v1.8.10 (nf_tables): host/network `pwn' not found
+Try `iptables -h' or 'iptables --help' for more information.
+iptables: No chain/target/match by that name.
+iptables: No chain/target/match by that name.
